@@ -23,9 +23,7 @@ class String
   end
 
   def count_sentences
-    self.split(".", "?")
-    binding.pry
-    x.count
-    binding.pry
+    # string.scan(/[^\.!?]+[\.!?]/).map(&:strip).count
+    self.split(/\. |\! |\? /).count
   end
 end
